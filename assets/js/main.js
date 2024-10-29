@@ -454,3 +454,37 @@ $(document).ready(function () {
         }
     });
 });
+
+
+
+// Access the form element
+const form = document.getElementById('contactform');
+
+// Add an event listener for form submission
+form.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Create a FormData object from the form
+    const formData = new FormData(form);
+
+    try {
+        // Send a POST request to the contact.php script
+        const response = await fetch('https://solutiontechservices.com/forms/contact.php', {
+            method: 'POST',
+            body: formData, // Pass the form data
+        });
+
+        // Check if the request was successful
+        if (response.ok) {
+            const result = await response.json(); // Parse the JSON response
+            document.getElementById('alert').innerHTML = `<div class="alert alert-success">Message sent successfully!</div>`;
+        } else {
+            // Handle errors
+            const errorText = await response.text(); // Get the error text
+            document.getElementById('alert').innerHTML = `<div class="alert alert-danger">Error: ${errorText}</div>`;
+        }
+    } catch (error) {
+        // Handle network errors
+        document.getElementById('alert').innerHTML = `<div class="alert alert-danger">Network error: ${error.message}</div>`;
+    }
+});
