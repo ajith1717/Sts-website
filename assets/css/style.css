@@ -3391,3 +3391,10 @@ p.copyright {
   object-fit: cover;
   /* Cover the area without distorting the image */
 }
+
+
+.screenshots-carousel .shot a img {
+  border-radius: 3px;
+  /* width: 100%; */
+  height: 500px;
+}
