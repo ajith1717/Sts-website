@@ -18,6 +18,10 @@
   <link href="http://fonts.googleapis.com/css?family=Crimson+Text:400,600" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
 
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CJost:300,300i,400,400i,500,500i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
   <!-- Bootstrap CSS Style -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -1082,8 +1086,15 @@
     ================================================== -->
     <section>
       <div id="module-maps">
-        <div id="map"></div>
-      </div>
+        <!-- <div id="map"></div> -->
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe style="width:100%; border: 0px; overflow:hidden; margin:0;" height="290" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=nagercoil&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            <a href="https://2piratebay.org"></a><br>
+            <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+          </div>
+        </div>
     </section>
     <!-- End Google map -->
 
