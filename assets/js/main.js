@@ -28,10 +28,14 @@ $(document).ready(function ($) {
         Collapse menu on click
     =============================================== */
 
-    $('.navbar-collapse a:not(.dropdown-toggle)').click(function () {
-        if ($(window).width() < 768)
-            $('.navbar-collapse').collapse('hide');
+    $(document).ready(function () {
+        $('.navbar-collapse a:not(.dropdown-toggle)').click(function () {
+            if ($(window).width() <= 800) {
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
     });
+
 
     /* ==============================================
         Scrollspy
