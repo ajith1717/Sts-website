@@ -3402,7 +3402,7 @@ p.copyright {
 
 .screenshot-img {
   width: 100%;
-  height: auto;
+  height: 500px;
   object-fit: contain;
 }
 
@@ -3459,4 +3459,11 @@ p.copyright {
 .navbar-nav>li>a:focus {
   color: #eea501;
   /* Hover and focus color */
+}
+
+
+.screenshots-carousel.animated.fadeInUp.in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
