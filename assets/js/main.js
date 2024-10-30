@@ -37,13 +37,24 @@ $(document).ready(function ($) {
     });
 
 
+    // $(document).ready(function () {
+    //     $(".navbar-toggle").click(function () {
+    //         $("#oblique").toggleClass("in");
+    //     });
+    // });
 
+
+    $(document).ready(function () {
+        $(".navbar-toggle").click(function () {
+            $("#oblique").collapse('toggle');
+        });
+    });
     /* ==============================================
         Scrollspy
     =============================================== */
 
     $('body').scrollspy({
-        target: '#navigation-nav',
+        target: '#oblique',
         offset: 140      //px/
     });
 
