@@ -3417,9 +3417,9 @@ p.copyright {
 }
 
 @media screen and (max-width: 480px) {
-  .back-to-top {
+  /* .back-to-top {
     visibility: hidden;
-  }
+  } */
 }
 
 
