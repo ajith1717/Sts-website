@@ -72,7 +72,7 @@ body {
   font-size: 13px;
   letter-spacing: 1.2px;
   -webkit-font-smoothing: antialiased;
-  padding-top: 68px;
+  /* padding-top: 68px; */
   position: relative;
 }
 
@@ -3142,7 +3142,7 @@ p.copyright {
 @media screen and (max-width: 1200px) {
 
   body {
-    padding-top: 55px;
+    /* padding-top: 55px; */
   }
 
   .navbar .container {
@@ -3243,7 +3243,7 @@ p.copyright {
 /* Add borders for each menu item when width is greater than 1000px */
 @media (min-width: 1201px) {
   .navbar-nav>li>a {
-    /* border: 1px solid #ccc; */
+    /* border: 1px solid #070707; */
     /* border-radius: 5px; */
     /* Add a border to each menu item */
     margin-right: 5px;
@@ -3471,6 +3471,7 @@ p.copyright {
 
 .navbar-header {
   display: flex;
+  width: 100%;
   /* Use flexbox for alignment */
   align-items: center;
   /* Center vertically */
@@ -3757,9 +3758,9 @@ p.copyright {
     display: none;
   }
 
-  .navbar-collapse {
+  /* .navbar-collapse {
     display: flex !important;
-  }
+  } */
 }
 
 /* Show toggle button and hide navbar collapse by default on smaller screens */
@@ -3768,9 +3769,9 @@ p.copyright {
     display: block;
   }
 
-  /* .navbar-collapse {
+  .navbar-collapse {
     display: none;
-  } */
+  }
 
   .navbar-collapse.in {
     display: block !important;

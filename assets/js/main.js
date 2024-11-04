@@ -28,27 +28,27 @@ $(document).ready(function ($) {
         Collapse menu on click
     =============================================== */
 
-    $(document).ready(function () {
-        $('.navbar-collapse a:not(.dropdown-toggle)').click(function () {
-            if ($(window).width() <= 800) {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
-    });
-
-
     // $(document).ready(function () {
-    //     $(".navbar-toggle").click(function () {
-    //         $("#oblique").toggleClass("in");
+    //     $('.navbar-collapse a:not(.dropdown-toggle)').click(function () {
+    //         if ($(window).width() <= 800) {
+    //             $('.navbar-collapse').collapse('hide');
+    //         }
     //     });
     // });
 
 
     $(document).ready(function () {
         $(".navbar-toggle").click(function () {
-            $("#oblique").collapse('toggle');
+            $("#navbar-collapse").toggleClass("in");
         });
     });
+
+
+    // $(document).ready(function () {
+    //     $(".navbar-toggle").click(function () {
+    //         $("#oblique").collapse('toggle');
+    //     });
+    // });
     /* ==============================================
         Scrollspy
     =============================================== */
