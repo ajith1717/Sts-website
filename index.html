@@ -95,29 +95,59 @@
           <span style="background-color: #eea501; width: 22px; height: 2px; display: block; margin: 4px 0;"></span>
         </button>
 
-        <!-- Navigation Links -->
-        <div id="navbarMenu"
-          style="display: none; position: absolute; top: 60px; right: 20px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; width: 200px; z-index: 1000;">
-          <ul style="list-style-type: none; padding: 0; margin: 0;">
-            <li style="margin: 5px 0;"><a href="#wrapper"
-                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none; display: block;">Home</a>
+        <!-- Horizontal Navigation Links (desktop view) -->
+        <div id="horizontalNavbarMenu" style="display: flex; padding: 10px 0;">
+          <ul style="list-style-type: none; padding: 0; margin: 0; display: flex;">
+            <li style="margin: 0 15px;"><a href="#wrapper"
+                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none;">Home</a></li>
+            <li style="margin: 0 15px;"><a href="#landing-offer"
+                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none;">About</a>
             </li>
-            <li style="margin: 5px 0;"><a href="#landing-offer"
-                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none; display: block;">About</a>
+            <li style="margin: 0 15px;"><a href="#features-section"
+                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none;">Services</a>
             </li>
-            <li style="margin: 5px 0;"><a href="#features-section"
-                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none; display: block;">Services</a>
+            <li style="margin: 0 15px;"><a href="#team-section"
+                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none;">Team</a></li>
+            <li style="margin: 0 15px;"><a href="#features-app-section-2"
+                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none;">Works</a>
             </li>
-            <li style="margin: 5px 0;"><a href="#team-section"
-                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none; display: block;">Team</a>
-            </li>
-            <li style="margin: 5px 0;"><a href="#screenshots-section"
-                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none; display: block;">Works</a>
-            </li>
-            <li style="margin: 5px 0;"><a href="#contact-section"
-                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none; display: block;">Contact</a>
+            <li style="margin: 0 15px;"><a href="#contact-section"
+                style="color: #eea501; font-size: 16px; text-transform: uppercase; text-decoration: none;">Contact</a>
             </li>
           </ul>
+        </div>
+
+        <!-- Vertical Navigation Popup Menu (mobile view) -->
+        <div id="verticalNavbarMenu" style="
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #eea501;
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;">
+          <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin: 15px 0;"><a href="#wrapper"
+                style="color: #eea501; font-size: 24px; text-decoration: none;">Home</a></li>
+            <li style="margin: 15px 0;"><a href="#landing-offer"
+                style="color: #eea501; font-size: 24px; text-decoration: none;">About</a></li>
+            <li style="margin: 15px 0;"><a href="#features-section"
+                style="color: #eea501; font-size: 24px; text-decoration: none;">Services</a></li>
+            <li style="margin: 15px 0;"><a href="#team-section"
+                style="color: #eea501; font-size: 24px; text-decoration: none;">Team</a></li>
+            <li style="margin: 15px 0;"><a href="#features-app-section-2"
+                style="color: #eea501; font-size: 24px; text-decoration: none;">Works</a></li>
+            <li style="margin: 15px 0;"><a href="#contact-section"
+                style="color: #eea501; font-size: 24px; text-decoration: none;">Contact</a></li>
+          </ul>
+          <button onclick="toggleMenu()"
+            style="margin-top: 20px; background-color: #eea501; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">Close</button>
         </div>
 
       </div>
@@ -126,29 +156,29 @@
 
   <script>
     function toggleMenu() {
-      const navbarMenu = document.getElementById("navbarMenu");
+      const verticalNavbarMenu = document.getElementById("verticalNavbarMenu");
 
-      if (navbarMenu.style.display === "none" || navbarMenu.style.display === "") {
-        navbarMenu.style.display = "block";
+      if (verticalNavbarMenu.style.display === "none" || verticalNavbarMenu.style.display === "") {
+        verticalNavbarMenu.style.display = "flex"; // Show popup menu
       } else {
-        navbarMenu.style.display = "none";
+        verticalNavbarMenu.style.display = "none"; // Hide popup menu
       }
     }
 
     // Show or hide the toggle button and reset menu style based on window width
     function checkScreenWidth() {
       const navbarToggle = document.getElementById("navbarToggle");
-      const navbarMenu = document.getElementById("navbarMenu");
+      const horizontalNavbarMenu = document.getElementById("horizontalNavbarMenu");
+      const verticalNavbarMenu = document.getElementById("verticalNavbarMenu");
 
       if (window.innerWidth < 1200) {
         navbarToggle.style.display = "inline-block"; // Show toggle button on small screens
-        navbarMenu.style.display = "none"; // Hide the menu initially on mobile
+        horizontalNavbarMenu.style.display = "none"; // Hide horizontal menu on mobile
+        verticalNavbarMenu.style.display = "none"; // Hide vertical menu initially
       } else {
         navbarToggle.style.display = "none"; // Hide toggle button on large screens
-        navbarMenu.style.display = "block"; // Show menu as horizontal navbar on desktop
-        navbarMenu.style.position = "static"; // Reset positioning for desktop view
-        navbarMenu.style.backgroundColor = "transparent"; // Transparent background on desktop
-        navbarMenu.style.boxShadow = "none"; // No shadow for desktop
+        horizontalNavbarMenu.style.display = "flex"; // Show horizontal menu on desktop
+        verticalNavbarMenu.style.display = "none"; // Ensure vertical menu is hidden on desktop
       }
     }
 
@@ -156,6 +186,25 @@
     window.onload = checkScreenWidth;
     window.onresize = checkScreenWidth;
   </script>
+
+
+
+  <style>
+    /* Media query for responsive styling */
+    @media (min-width: 1200px) {
+      #navbarMenu ul {
+        display: flex;
+        /* Arrange items horizontally on large screens */
+      }
+
+      #navbarMenu li {
+        display: inline-block;
+        margin: 0 15px;
+        /* Space between menu items */
+      }
+    }
+  </style>
+
 
 
 
