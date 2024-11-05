@@ -3786,3 +3786,42 @@ p.copyright {
     /* Reduce font size to 15px */
   }
 }
+
+
+#clients-section {
+  overflow: hidden;
+}
+
+.clients-scrollable {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.clients-list {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.client {
+  flex: 0 0 auto;
+  padding: 0 20px;
+}
+
+.client img {
+  max-width: 100px;
+  /* Adjust logo size */
+  height: auto;
+  display: block;
+}
+
+/* Keyframes for auto-scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
