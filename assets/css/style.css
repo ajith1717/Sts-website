@@ -3825,3 +3825,68 @@ p.copyright {
     transform: translateX(-50%);
   }
 }
+
+#team-section {
+  background-color: #f9f9f9;
+  /* Background color for the team section */
+  padding: 50px 0;
+}
+
+.team-members .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.member-team {
+  background-color: #ffffff;
+  /* Background color for each team member card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 300px;
+  /* Fixed width for consistency */
+}
+
+.member-team img {
+  height: 250px;
+  /* Fixed height for all images */
+  width: 100%;
+  object-fit: cover;
+  /* Ensure image scales properly */
+  margin-bottom: 15px;
+}
+
+.member-details h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.member-details p {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 5px;
+}
+
+.social-icons li a {
+  color: #555;
+  font-size: 1.2em;
+}
+
+.social-icons li a:hover {
+  color: #007bff;
+}
